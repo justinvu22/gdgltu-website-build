@@ -88,10 +88,10 @@ nav img {
   }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1200px) {
   nav img {
-    width: 362.259px;
-    height: 66.584px;
+    width: 360px;
+    height: 60px;
   }
 }
 
