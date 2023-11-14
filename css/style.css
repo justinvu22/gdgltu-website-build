@@ -140,6 +140,15 @@ li .active {
 
 /* TODO - HAMBURGER ICON AND DROPDOWN FEATURE */
 
+/* HERO */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column; /* stack the items vertically */
+}
+
 /* FOOTER */
 
 footer {
