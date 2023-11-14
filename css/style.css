@@ -88,7 +88,7 @@ nav img {
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1440px) {
   nav img {
     width: 362.259px;
     height: 66.584px;
@@ -121,7 +121,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: black; /* change color on hover */
+  color: #222; /* change color on hover */
+}
+
+li .active {
+  color: #222; /* change color on click */
 }
 @media (max-width: 1200px) {
   nav ul li {
