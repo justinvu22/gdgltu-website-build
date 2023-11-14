@@ -139,3 +139,77 @@ li .active {
 }
 
 /* TODO - HAMBURGER ICON AND DROPDOWN FEATURE */
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  height: 250px;
+  gap: 400px;
+  background-color: white;
+}
+
+footer img {
+  width: 241px;
+  height: 125px;
+  position: relative;
+  left: 188px;
+  top: 59px;
+}
+
+footer ul {
+  list-style-type: none; /* remove bullet points */
+  display: inline-flex;
+  padding: 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: Google Sans Display;
+}
+
+footer h3 {
+  font-family: Google Sans Display;
+  color: #5f6368;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+footer #quick_links {
+  top: 33px;
+  left: -1px;
+  position: relative;
+}
+
+footer #social {
+  left: -61px;
+  top: 33px;
+  position: relative;
+}
+
+footer .social_icons {
+  position: relative;
+  left: -50px;
+  top: 14px;
+}
+
+footer .socials svg {
+  width: 13px;
+  height: 13px;
+  margin: 0 7px; /* increase the gap */
+  display: inline-flex;
+  padding: 4px 0px;
+  align-items: flex-start;
+  gap: 11px;
+}
