@@ -172,17 +172,29 @@ li .active {
   nav ul li {
     font-size: 13px;
   }
+  nav ul {
+    position: relative;
+    left: 50px;
+  }
 }
 
 @media (max-width: 768px) {
   nav ul li {
     font-size: 11px;
   }
+  nav ul {
+    position: relative;
+    left: 50px;
+  }
 }
 
 @media (max-width: 600px) {
   nav ul li {
     font-size: 9px;
+  }
+  nav ul {
+    position: relative;
+    left: 20px;
   }
 }
 
@@ -320,5 +332,96 @@ footer .socials a.youtube-icon:hover {
     padding-right: 50px;
     position: relative;
     top: -60px;
+  }
+}
+
+@media (max-width: 882px) {
+  footer .links {
+    position: relative;
+    right: 100px;
+  }
+  footer img {
+    position: relative;
+    right: 100px;
+  }
+
+  footer ul {
+    padding-left: 172px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .links {
+    position: relative;
+    right: 150px;
+  }
+}
+
+@media (max-width: 712px) {
+  footer img {
+    width: 130px;
+    height: 65px;
+    padding-top: 50px;
+    position: static;
+  }
+
+  footer .links {
+    padding-left: 100px;
+  }
+
+  footer #quick_links {
+    font-size: 14px;
+  }
+  footer ul {
+    font-size: 11px;
+    padding-left: 143px;
+    padding-top: 10px;
+  }
+
+  footer #social {
+    font-size: 14px;
+    padding-left: 17px;
+  }
+
+  footer .social_icons {
+    position: relative;
+    left: 18px;
+  }
+}
+
+@media (max-width: 630px) {
+  footer img {
+    position: relative;
+    right: 50px;
+  }
+
+  footer .links {
+    position: relative;
+    right: 250px;
+  }
+}
+
+@media (max-width: 527px) {
+  footer img {
+    position: relative;
+    right: 50px;
+  }
+
+  footer .links {
+    position: relative;
+    right: 300px;
+  }
+}
+
+@media (max-width: 477px) {
+  footer img {
+    position: relative;
+    right: 100px;
+  }
+
+  footer .links {
+    position: relative;
+    right: 350px;
   }
 }
