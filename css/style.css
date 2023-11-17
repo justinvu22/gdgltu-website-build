@@ -176,7 +176,8 @@ li .active {
   }
   nav ul {
     position: relative;
-    left: 50px;
+    /* this seems to be the issue */
+    /* left: 50px; */ 
   }
 }
 
