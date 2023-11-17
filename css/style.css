@@ -1,6 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Google Sans Display:wght@400");
+@import url("https://api.fontshare.com/css?f[]=google sans display@400&display=swap");
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Button Section */
+button {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+  /* Add transition for smooth animation */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  border-color: transparent;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Home Button */
+.home_button {
+  display: block;
+  margin-top: 10px;
+}
+
+/* NAVIGATION BAR */
+nav {
+  display: flex;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  width : 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* distribute the space between the items */
+  background: #fff;
+  box-shadow: 0px 4px 250px 0px rgba(0, 0, 0, 0.1);
+  font-family: Google Sans Display;
+}
+
+/* NAVIGATION IMAGE */
+
+nav img {
+  width: 27%;
+  height: auto;
+  flex-shrink: 0;
+  left: 100px;
+}
+
+@media (max-width: 1200px) {
+  nav img {
+    max-width: 300px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav img {
+    width: 240px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav img {
+    width: 180px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav img {
+    width: 120px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav img {
+    width: 360px;
+    height: 60px;
+  }
+}
+
+/* NAVIGATION LINKS */
+
+nav ul {
+  display: flex;
+  padding: 0px 50px;
+  justify-content: flex-end;
+  gap: 37px;
+  list-style: none;
+}
+
+nav ul li {
+  font-family: Google Sans Display;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* NAVIGATION LINKS BEHAVIOR */
+
+/* nav ul li a {
+  text-decoration: none;
+
+  color: #a4a4a4;
+}
+
+nav ul li a:hover {
+  color: #222;
+}
+
+li .active {
+  color: #222;
+} */
+
+/* This is part is for fun since I wanted to see how good 4 color gradient can look on nav links, please refer to the code above to return to normal hovering behavior */
+
+nav ul li a {
+  text-decoration: none;
+  color: #a4a4a4;
+  transition: 500ms ease;
+}
+
+nav ul li a:hover {
+  color: transparent;
+  transition: 500ms ease;
+  background: linear-gradient(90deg, red, orange, green, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+li .active {
+  color: #222;
+  background: none;
+}
+
+/* End of silly hovering behavior lmao */
+
+@media (max-width: 1200px) {
+  nav ul li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav ul li {
+    font-size: 13px;
+  }
+  nav ul {
+    position: relative;
+    /* this seems to be the issue */
+    /* left: 50px; */ 
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    font-size: 11px;
+  }
+  nav ul {
+    position: relative;
+    left: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    font-size: 9px;
+  }
+  nav ul {
+    position: relative;
+    left: 20px;
+  }
+}
+
+/* TODO - HAMBURGER ICON AND DROPDOWN FEATURE */
+
+/* HERO */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column; /* stack the items vertically */
+}
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 250px;
+  /* gap: 400px; */
+  background-color: white;
+  box-shadow: 0px -4px 250px 0px rgba(0, 0, 0, 0.1);
+}
+
+footer img {
+  width: 240px;
+  height: 130px;
+  padding-left: 165px;
+  padding-top: 60px;
+
+}
+
+footer .links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 28px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  padding-left: 15px;
+  top: -30px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: Google Sans Display;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: transparent;
+  transition: 500ms ease;
+  background: linear-gradient(90deg, red, orange, green, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer h3 {
+  font-family: Google Sans Display;
+  color: #5f6368;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.social_icons {
+  position: relative;
+  top: -14px;
+  padding-left: 22px;
+}
+
+footer .socials a {
+  text-decoration: none; /* remove underline */
+  color: inherit; /* inherit color from parent */
+}
+
+footer .socials a svg {
+  fill: currentColor; /* use the color of the parent element */
+}
+
+footer .socials a svg {
+  width: 13px;
+  height: 13px;
+  margin: 0 7px;
+  display: inline-flex;
+  padding: 4px 0px;
+  align-items: flex-start;
+  gap: 11px;
+  transition: fill 0.3s ease;
+}
+
+footer .socials a.linkedin-icon:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+footer .socials a.instagram-icon:hover {
+  color: #c13584; /* Instagram gradient, use any color you like */
+}
+
+footer .socials a.youtube-icon:hover {
+  color: #ff0000; /* YouTube red */
+}
+
+/* FOOTER MEDIA QUERIES */
+
+@media (max-width: 1300px) {
+  footer .links {
+    flex-direction: column;
+  }
+
+  footer ul {
+    flex-direction: row;
+    padding-left: 173px;
+    gap: 20px;
+  }
+
+  footer .socials {
+    padding-right: 50px;
+    position: relative;
+    top: -60px;
+  }
+}
+
+@media (max-width: 882px) {
+  footer .links {
+    position: relative;
+    right: 100px;
+  }
+  footer img {
+    position: relative;
+    right: 100px;
+  }
+
+  footer ul {
+    padding-left: 172px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .links {
+    position: relative;
+    right: 150px;
+  }
+}
+
+@media (max-width: 712px) {
+  footer img {
+    width: 130px;
+    height: 65px;
+    padding-top: 50px;
+    position: static;
+  }
+
+  footer .links {
+    padding-left: 100px;
+  }
+
+  footer #quick_links {
+    font-size: 14px;
+  }
+  footer ul {
+    font-size: 11px;
+    padding-left: 143px;
+    padding-top: 10px;
+  }
+
+  footer #social {
+    font-size: 14px;
+    padding-left: 17px;
+  }
+
+  footer .social_icons {
+    position: relative;
+    left: 18px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 630px) {
+  footer img {
+    position: relative;
+    right: 50px;
+  }
+
+  footer .links {
+    position: relative;
+    right: 250px;
+  }
+}
+
+@media (max-width: 527px) {
+  footer img {
+    position: relative;
+    right: 50px;
+  }
+
+  footer .links {
+    position: relative;
+    right: 300px;
+  }
+}
+
+@media (max-width: 477px) {
+  footer img {
+    position: relative;
+    right: 100px;
+  }
+
+  footer .links {
+    position: relative;
+    right: 350px;
+  }
 }
