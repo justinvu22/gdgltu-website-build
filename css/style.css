@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Google Sans Display:wght@400");
 @import url("https://api.fontshare.com/css?f[]=google sans display@400&display=swap");
 
+/* BODY SECTION  */
+
 body {
   margin: 0;
   padding: 0;
@@ -14,38 +16,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
-/* Button Section */
-button {
-  border: 2px solid black;
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease, box-shadow 0.3s ease;
-  /* Add transition for smooth animation */
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
-  background-color: black;
-  color: white;
-  border-color: transparent;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* Home Button */
-.home_button {
-  display: block;
-  margin-top: 10px;
-}
+/* END OF BODY SECTION  */
 
 /* NAVIGATION BAR */
 nav {
@@ -60,6 +31,8 @@ nav {
   background: #fff;
   box-shadow: 0px 4px 250px 0px rgba(0, 0, 0, 0.1);
   font-family: Google Sans Display;
+  position: relative; /* z-index only works on positioned elements */
+  z-index: 2; /* make .navbar appear on top of the image and .hero-text-quote */
 }
 
 /* NAVIGATION IMAGE */
@@ -204,19 +177,116 @@ li .active {
 
 /* TODO - HAMBURGER ICON AND DROPDOWN FEATURE */
 
+/* END OF NAVIGATION BAR */
+
 /* HERO */
 .hero-container {
+  position: sticky;
+  top: 0; /* stick to the top of the viewport */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 50vh;
-  flex-direction: column; /* stack the items vertically */
+  height: 60vh;
+  flex-direction: row; /* stack the items vertically */
+  margin-top: 90px;
 }
+
+.hero-img {
+  flex: 0 0 60%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 60% */
+  filter: grayscale(100%); /* make the image grayscale by default */
+  transition: filter 0.2s ease; /* add a transition effect */
+}
+
+.hero-img:hover {
+  filter: grayscale(0); /* remove the grayscale filter when hovered */
+}
+
+.hero-text {
+  flex: 1; /* flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+}
+
+.hero-text-quote {
+  background-color: white;
+  width: 614px;
+  height: 161px;
+  z-index: 1; /* make .hero-text-quote appear on top of the image */
+  position: absolute; /* z-index only works on positioned elements */
+  right: 820px;
+  bottom: 228px;
+  font-family: Google Sans Display;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex; /* add this */
+  align-items: center; /* add this */
+  justify-content: center; /* add this */
+}
+
+.hero-text-cibg {
+  background-color: white;
+  display: flex;
+  width: 416px;
+  height: 122px;
+  align-items: center;
+  align-content: center;
+  padding: 10px 0;
+  box-sizing: border-box; /* include padding in width and height */
+  flex-wrap: wrap;
+  position: absolute;
+  right: 1018px;
+  top: 225px;
+}
+
+.hero-text-cibg p {
+  color: #222;
+  font-family: Google Sans Display;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.hero-icons {
+  position: absolute;
+  right: 1265px;
+  top: 385px;
+  gap: 9px;
+}
+
+.hero-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  transition: all 0.5s ease; /* add a transition effect */
+}
+
+.hero-icons img:hover {
+  animation: bounce 1s; /* apply the bounce  when hovered */
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px); /* further reduce bounce height */
+  }
+  60% {
+    transform: translateY(-2px); /* further reduce bounce height */
+  }
+}
+
+/* END OF HERO SECTION  */
 
 /* FOOTER */
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   display: flex;
