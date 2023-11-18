@@ -53,7 +53,7 @@ nav {
   height: 80px;
   padding: 0;
   margin: 0;
-  width : 100%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   /* distribute the space between the items */
@@ -65,10 +65,11 @@ nav {
 /* NAVIGATION IMAGE */
 
 nav img {
-  width: 27%;
   height: auto;
   flex-shrink: 0;
   left: 100px;
+  padding-left: 50px;
+  padding-top: 26px;
 }
 
 @media (max-width: 1200px) {
@@ -177,7 +178,7 @@ li .active {
   nav ul {
     position: relative;
     /* this seems to be the issue */
-    /* left: 50px; */ 
+    /* left: 50px; */
   }
 }
 
@@ -230,9 +231,8 @@ footer {
 footer img {
   width: 240px;
   height: 130px;
-  padding-left: 165px;
+  padding-left: 115px;
   padding-top: 60px;
-
 }
 
 footer .links {
@@ -251,7 +251,7 @@ footer ul {
   align-items: flex-start;
   gap: 5px;
   padding-left: 15px;
-  top: -30px;
+  transform: translateY(-18px);
 }
 
 footer ul li a {
@@ -280,9 +280,8 @@ footer h3 {
 }
 
 .social_icons {
-  position: relative;
-  top: -14px;
-  padding-left: 22px;
+  display: flex;
+  transform: translateX(-4px);
 }
 
 footer .socials a {
@@ -319,112 +318,83 @@ footer .socials a.youtube-icon:hover {
 
 /* FOOTER MEDIA QUERIES */
 
-@media (max-width: 1300px) {
+@media (max-width: 992px) {
+  footer {
+    justify-content: space-between;
+  }
+  footer img {
+    width: 200px; /* Decrease the width */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 50px; /* Adjust padding to push it to the left */
+    padding-top: 60px; /* Adjust padding to push it to the top */
+  }
+
+  /* Adjust the links in the footer */
   footer .links {
     flex-direction: column;
+    padding-left: 25%;
+  }
+
+  footer .quick_links {
+    position: relative;
   }
 
   footer ul {
+    position: absolute;
     flex-direction: row;
-    padding-left: 173px;
     gap: 20px;
+    left: -13px;
+    transform: translateY(-30px);
   }
 
   footer .socials {
-    padding-right: 50px;
-    position: relative;
-    top: -60px;
-  }
-}
-
-@media (max-width: 882px) {
-  footer .links {
-    position: relative;
-    right: 100px;
-  }
-  footer img {
-    position: relative;
-    right: 100px;
+    transform: translateY(-10px);
   }
 
-  footer ul {
-    padding-left: 172px;
-    width: 300px;
+  footer .social_icons {
+    transform: translateY(-13px);
+    position: relative;
+    right: 5px;
   }
 }
 
 @media (max-width: 768px) {
-  footer .links {
-    position: relative;
-    right: 150px;
-  }
-}
-
-@media (max-width: 712px) {
-  footer img {
-    width: 130px;
-    height: 65px;
-    padding-top: 50px;
-    position: static;
-  }
-
-  footer .links {
-    padding-left: 100px;
-  }
-
-  footer #quick_links {
+  footer .links h3 {
     font-size: 14px;
+    padding-left: 1px;
   }
   footer ul {
     font-size: 11px;
-    padding-left: 143px;
-    padding-top: 10px;
+    padding-top: 13px;
   }
-
-  footer #social {
-    font-size: 14px;
-    padding-left: 17px;
-  }
-
-  footer .social_icons {
-    position: relative;
-    left: 18px;
-    padding-top: 5px;
-  }
-}
-
-@media (max-width: 630px) {
   footer img {
-    position: relative;
-    right: 50px;
+    width: 125px; /* Decrease the width */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 50px; /* Adjust padding to push it to the left */
+    padding-top: 60px; /* Adjust padding to push it to the top */
   }
 
   footer .links {
-    position: relative;
-    right: 250px;
+    padding-left: 25%;
+  }
+  footer .socials {
+    transform: translateY(-40px);
+  }
+  footer .socials a svg {
+    width: 9px;
+    height: auto;
   }
 }
 
-@media (max-width: 527px) {
+@media (max-width: 600px) {
   footer img {
-    position: relative;
-    right: 50px;
+    width: 125px; /* Decrease the width */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 50px; /* Adjust padding to push it to the left */
+    padding-top: 60px; /* Adjust padding to push it to the top */
   }
 
   footer .links {
-    position: relative;
-    right: 300px;
-  }
-}
-
-@media (max-width: 477px) {
-  footer img {
-    position: relative;
-    right: 100px;
-  }
-
-  footer .links {
-    position: relative;
-    right: 350px;
+    padding-left: 10%;
   }
 }
