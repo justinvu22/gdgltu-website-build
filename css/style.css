@@ -14,7 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
+
+  overflow-y: auto;
 }
 /* END OF BODY SECTION  */
 
@@ -181,17 +182,18 @@ li .active {
 
 /* HERO */
 .hero-container {
-  position: sticky;
+  position: relative;
   top: 0; /* stick to the top of the viewport */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 60vh;
   flex-direction: row; /* stack the items vertically */
-  margin-top: 90px;
+  margin-top: 85px;
 }
 
 .hero-img {
+  position: relative;
   flex: 0 0 60%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 60% */
   filter: grayscale(100%); /* make the image grayscale by default */
   transition: filter 0.2s ease; /* add a transition effect */
@@ -211,12 +213,12 @@ li .active {
   height: 161px;
   z-index: 1; /* make .hero-text-quote appear on top of the image */
   position: absolute; /* z-index only works on positioned elements */
-  right: 820px;
-  bottom: 228px;
+  right: 54%;
+  bottom: 52%;
   font-family: Google Sans Display;
   font-size: 36px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   display: flex; /* add this */
   align-items: center; /* add this */
@@ -233,9 +235,9 @@ li .active {
   padding: 10px 0;
   box-sizing: border-box; /* include padding in width and height */
   flex-wrap: wrap;
-  position: absolute;
-  right: 1018px;
-  top: 225px;
+  position: relative;
+  left: 4.5%;
+  top: 12%;
 }
 
 .hero-text-cibg p {
@@ -243,14 +245,15 @@ li .active {
   font-family: Google Sans Display;
   font-size: 40px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
+  padding-top: 100px;
 }
 
 .hero-icons {
-  position: absolute;
-  right: 1265px;
-  top: 385px;
+  position: relative;
+  top: 50%;
+  right: 23%;
   gap: 9px;
 }
 
@@ -282,6 +285,137 @@ li .active {
 }
 
 /* END OF HERO SECTION  */
+
+/* HERO MEDIA QUERIES */
+
+/* END OF HERO MEDIA QUERIES */
+
+/* BODY CONNECT */
+.body-connect {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 84px;
+  width: 100%;
+  height: auto;
+  padding: 100px 0; /* adjust as needed */
+}
+
+.body-connect h1 {
+  color: #222;
+  font-family: Google Sans Display;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 75%;
+}
+
+.body-connect p {
+  color: #5f6368;
+  text-align: center;
+  font-family: Google Sans Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.96px;
+  width: 57%;
+}
+
+.underline-wavy {
+  background: linear-gradient(90deg, green, red, orange, blue, green);
+  background-size: 800% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorChange 6s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.triangle {
+  padding-right: 96%;
+}
+
+.red-circle {
+  padding-left: 94%;
+}
+
+/* END OF BODY CONNECT */
+
+/* BODY LEARN */
+.body-learn {
+  background-color: #f1f3f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 84px;
+  width: 100%;
+  height: auto;
+  padding: 100px 0; /* adjust as needed */
+}
+
+.body-learn h1 {
+  color: #222;
+  font-family: "Google Sans Display";
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 75%;
+}
+
+.body-learn p {
+  color: #222;
+  text-align: center;
+  font-family: Google Sans Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.5px; /* 156.25% */
+  letter-spacing: -0.96px;
+  width: 57%;
+}
+
+.body-learn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 10%;
+  padding: 10px;
+  color: #fff;
+  font-family: Google Sans Display;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  border-radius: 10px;
+  background-color: #4285f4;
+  transition: transform 0.3s ease-in-out;
+}
+
+.body-learn button a {
+  text-decoration: none;
+  color: white;
+}
+
+.body-learn button:hover {
+  background-color: #2f62b7;
+  transform: scale(1.05);
+}
 
 /* FOOTER */
 
