@@ -195,14 +195,12 @@ li .active {
 .hero-img {
   position: relative;
   flex: 0 0 60%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 60% */
-  filter: grayscale(100%); /* make the image grayscale by default */
-  transition: filter 0.2s ease; /* add a transition effect */
 }
-
+/*
 .hero-img:hover {
-  filter: grayscale(0); /* remove the grayscale filter when hovered */
+  filter: grayscale(0);  remove the grayscale filter when hovered 
 }
-
+*/
 .hero-text {
   flex: 1; /* flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
 }
