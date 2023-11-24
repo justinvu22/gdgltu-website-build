@@ -74,3 +74,29 @@ header .nav{
   width: 50%;
 }
 
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: #abbaba;
+    color: #000;
+    font-family: Google Sans Display;
+    font-size: 1.8rem;
+    color: #5F6368;
+    background: #FFF;
+    position: relative;
+    /* placed at the bottom of the screen */
+  }
+
+/* hirozontal-align-foooter needs to be formatted to display horizontally */
+.hirozontal-align-foooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
