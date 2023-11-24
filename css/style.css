@@ -17,5 +17,41 @@ body
 {
     font-family: "Google Sans Display", sans-serif;
     font-size: 1.6rem;
-    background-color: red;
+    background-color: white;
+}
+
+header{
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  align-items: center;
+  box-shadow: 0px 4px 250px 0px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  width: 60%;
+  height: 60%;
+  padding: 10px 30px;
+}
+
+header .nav{
+  display: flex;
+  position: absolute;
+  right: 3%;
+  justify-content: flex-end;
+  gap: 6rem;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #A4A4A4;
+  font-size: 1.8rem;
+}
+
+.nav li a:hover {
+  color: #222;
 }
