@@ -55,3 +55,22 @@ header .nav{
 .nav li a:hover {
   color: #222;
 }
+
+
+
+/*Start of Hero section*/
+.container {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.quote_text {
+  width:50%;
+}
+
+.hero_image {
+  width: 50%;
+}
+
