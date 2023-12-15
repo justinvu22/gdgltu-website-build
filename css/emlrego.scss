@@ -3,15 +3,15 @@
 
 $font: "Google Sans Display", sans-serif;
 
-html, * {
+html,
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
-  background: #0F0F11;
+  background: #0f0f11;
   overflow-x: clip;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -62,11 +62,7 @@ body::-webkit-scrollbar {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    background: linear-gradient(
-      130deg,
-      #fff 0.19%,
-      rgba(255, 255, 255, 0.2) 100%
-    );
+    background: linear-gradient(110deg, #fff 0.19%, rgba(0, 0, 0, 0.445) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -119,20 +115,30 @@ body::-webkit-scrollbar {
 
       li:hover {
         background: linear-gradient(
-      94deg,
-      #ff3636 -0.76%,
-      #eb00ff 72.19%,
-      #eb00ff 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200%;
-    background-position: -100%;
-    white-space: nowrap;
-    animation: animated_gradient 3s ease infinite;
+          94deg,
+          #ff3636 -0.76%,
+          #eb00ff 72.19%,
+          #eb00ff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-position: -100%;
+        white-space: nowrap;
+        animation: animated_gradient 3s ease infinite;
       }
     }
+  }
+
+  .para_first {
+    color: #fff;
+    font-family: Google Sans;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 4rem 0 0 3rem;
   }
 }
 
