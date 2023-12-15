@@ -62,6 +62,7 @@ body::-webkit-scrollbar {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: default;
 }
 .main .role_name {
   text-align: left;
@@ -79,9 +80,11 @@ body::-webkit-scrollbar {
   background-position: -100%;
   white-space: nowrap;
   animation: animated_gradient 7s ease infinite;
+  cursor: default;
 }
 .main .second_text {
   margin-top: 13rem;
+  cursor: default;
 }
 .main .qual {
   margin: 4rem 0 0 3rem;
@@ -94,6 +97,7 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 400;
   line-height: 145%; /* 4.98438rem */
+  cursor: default;
 }
 .main .qual ul li:hover {
   background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
