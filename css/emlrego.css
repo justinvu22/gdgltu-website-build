@@ -110,14 +110,17 @@ body::-webkit-scrollbar {
   white-space: nowrap;
   animation: animated_gradient 3s ease infinite;
 }
-.main .para_first {
+.main .mid-section {
+  margin: 4rem 3rem 0 3rem;
+}
+.main .mid-section p {
   color: #fff;
   font-family: Google Sans;
-  font-size: 1.75rem;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 4rem 0 0 3rem;
+  cursor: default;
 }
 
 @keyframes animated_gradient {

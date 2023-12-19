@@ -131,14 +131,17 @@ body::-webkit-scrollbar {
     }
   }
 
-  .para_first {
-    color: #fff;
-    font-family: Google Sans;
-    font-size: 1.75rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 4rem 0 0 3rem;
+  .mid-section {
+    margin: 4rem 3rem 0 3rem;
+    p {
+      color: #fff;
+      font-family: Google Sans;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      cursor: default;
+    }
   }
 }
 
