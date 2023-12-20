@@ -116,11 +116,63 @@ body::-webkit-scrollbar {
 .main .mid-section p {
   color: #fff;
   font-family: Google Sans;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   cursor: default;
+}
+
+.upcoming {
+  margin: 4rem 3rem 0 3rem;
+}
+.upcoming .role_name2 {
+  text-align: left;
+  margin: 10rem 0 0 0;
+  font-family: Google Sans;
+  font-size: 11.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-position: -100%;
+  white-space: wrap;
+  animation: animated_gradient 7s ease infinite;
+  cursor: default;
+}
+.upcoming ul {
+  margin: 4rem 0 0 0;
+}
+.upcoming ul li {
+  list-style-type: none;
+  color: #fff;
+  font-family: Google Sans;
+  font-size: 3.4375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 4.98438rem */
+  cursor: pointer;
+}
+.upcoming ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.upcoming ul li:hover {
+  background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-position: -100%;
+  white-space: nowrap;
+  animation: animated_gradient 3s ease infinite;
+}
+.upcoming #third_text {
+  margin: 10rem 0 0 0;
 }
 
 @keyframes animated_gradient {
