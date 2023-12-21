@@ -40,9 +40,6 @@ body::-webkit-scrollbar {
   height: 90px;
   margin-top: 25px;
 }
-.sidenav .logo svg {
-  filter: drop-shadow(0px 0px 250px rgb(255, 255, 255));
-}
 
 .main {
   margin-left: 120px;
@@ -85,6 +82,8 @@ body::-webkit-scrollbar {
 }
 .main .second_text {
   margin-top: 13rem;
+  font-size: 6.5rem;
+  font-weight: bold;
   cursor: default;
 }
 .main .qual {
@@ -111,7 +110,7 @@ body::-webkit-scrollbar {
   animation: animated_gradient 3s ease infinite;
 }
 .main .mid-section {
-  margin: 4rem 3rem 0 3rem;
+  margin: 4rem 4rem 0 3rem;
 }
 .main .mid-section p {
   color: #fff;
@@ -122,11 +121,10 @@ body::-webkit-scrollbar {
   line-height: normal;
   cursor: default;
 }
-
-.upcoming {
+.main .upcoming {
   margin: 4rem 3rem 0 3rem;
 }
-.upcoming .role_name2 {
+.main .upcoming .role_name2 {
   text-align: left;
   margin: 10rem 0 0 0;
   font-family: Google Sans;
@@ -144,10 +142,10 @@ body::-webkit-scrollbar {
   animation: animated_gradient 7s ease infinite;
   cursor: default;
 }
-.upcoming ul {
+.main .upcoming ul {
   margin: 4rem 0 0 0;
 }
-.upcoming ul li {
+.main .upcoming ul li {
   list-style-type: none;
   color: #fff;
   font-family: Google Sans;
@@ -155,13 +153,14 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 400;
   line-height: 145%; /* 4.98438rem */
-  cursor: pointer;
+  cursor: default;
 }
-.upcoming ul li a {
+.main .upcoming ul li a {
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
-.upcoming ul li:hover {
+.main .upcoming ul li:hover {
   background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -171,8 +170,65 @@ body::-webkit-scrollbar {
   white-space: nowrap;
   animation: animated_gradient 3s ease infinite;
 }
-.upcoming #third_text {
+.main .upcoming #third_text {
   margin: 10rem 0 0 0;
+  font-size: 6.5rem;
+  font-weight: bold;
+}
+.main .perks .title_3 {
+  margin: 10rem 3rem 0 3rem;
+  font-size: 6.5rem;
+  font-weight: bold;
+}
+.main .perks ul {
+  margin: 4rem 3rem 0 3rem;
+}
+.main .perks ul li {
+  list-style-type: none;
+  color: #fff;
+  font-family: Google Sans;
+  font-size: 3.4375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 4.98438rem */
+  cursor: default;
+}
+.main .perks ul li:hover {
+  background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-position: -100%;
+  white-space: nowrap;
+  animation: animated_gradient 3s ease infinite;
+}
+.main .perks .explaination {
+  margin: 4rem 3rem 0 3rem;
+  background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-position: -100%;
+  white-space: wrap;
+  animation: animated_gradient 7s ease infinite;
+  font-family: Google Sans;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: default;
+}
+.main .apply_section h3 {
+  margin: 4rem 3rem 0 3rem;
+  font-family: Google Sans;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: default;
+  color: #fff;
 }
 
 @keyframes animated_gradient {
