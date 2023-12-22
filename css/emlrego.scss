@@ -327,6 +327,7 @@ body::-webkit-scrollbar {
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        cursor: pointer;
       
       a{
         text-decoration: none;
@@ -354,14 +355,29 @@ body::-webkit-scrollbar {
   margin-top: 4rem;
   height: 20rem;
   background: rgba(25, 25, 25, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .footer_logo{
-    width: 18.75rem;
-    height: 1.25rem;
+    width: 31.25rem;
+    height: 2.083rem;
     
     img{
       width: 100%;
       height: 100%;
+    }
+
+    p{
+      color: #535353;
+      font-family: Google Sans;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      cursor: default;
+      margin-top: 2rem;
+      text-align: center;
     }
   }
 }
