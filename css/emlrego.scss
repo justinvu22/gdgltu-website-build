@@ -52,7 +52,7 @@ body::-webkit-scrollbar {
   h2 {
     text-align: left;
     margin: 4rem 0 0 3rem;
-    text-shadow: 0px 0px 250px rgba(255, 255, 255, 0.25);
+    text-shadow: 0px 0px 150px rgba(255, 255, 255, 0.116);
     font-family: Google Sans;
     font-size: 5.36588rem;
     font-style: normal;
@@ -123,7 +123,7 @@ body::-webkit-scrollbar {
         -webkit-text-fill-color: transparent;
         background-size: 200%;
         background-position: -100%;
-        white-space: nowrap;
+        white-space: wrap;
         animation: animated_gradient 3s ease infinite;
       }
     }
@@ -166,7 +166,7 @@ body::-webkit-scrollbar {
       animation: animated_gradient 7s ease infinite;
       cursor: default;
     }
-  
+
     ul {
       margin: 4rem 0 0 0;
       li {
@@ -178,14 +178,14 @@ body::-webkit-scrollbar {
         font-weight: 400;
         line-height: 145%; /* 4.98438rem */
         cursor: default;
-  
+
         a {
           text-decoration: none;
           color: #fff;
           cursor: pointer;
         }
       }
-  
+
       li:hover {
         background: linear-gradient(
           94deg,
@@ -198,18 +198,18 @@ body::-webkit-scrollbar {
         -webkit-text-fill-color: transparent;
         background-size: 200%;
         background-position: -100%;
-        white-space: nowrap;
+        white-space: wrap;
         animation: animated_gradient 3s ease infinite;
       }
     }
-  
+
     #third_text {
       margin: 10rem 0 0 0;
       font-size: 6.5rem;
       font-weight: bold;
     }
   }
-  
+
   .perks {
     .title_3 {
       margin: 10rem 3rem 0 3rem;
@@ -228,7 +228,7 @@ body::-webkit-scrollbar {
         line-height: 145%; /* 4.98438rem */
         cursor: default;
       }
-  
+
       li:hover {
         background: linear-gradient(
           94deg,
@@ -241,11 +241,11 @@ body::-webkit-scrollbar {
         -webkit-text-fill-color: transparent;
         background-size: 200%;
         background-position: -100%;
-        white-space: nowrap;
+        white-space: wrap;
         animation: animated_gradient 3s ease infinite;
       }
     }
-  
+
     .explaination {
       margin: 4rem 3rem 0 3rem;
       background: linear-gradient(
@@ -270,9 +270,43 @@ body::-webkit-scrollbar {
     }
   }
 
-  .apply_section{
-    h3{
+  .apply_section {
+    .title_4 {
+      margin-top: 10rem;
+      font-size: 6.5rem;
+      font-weight: bold;
+    }
+    ul {
       margin: 4rem 3rem 0 3rem;
+      li {
+        list-style-type: none;
+        color: #fff;
+        font-family: Google Sans;
+        font-size: 3.4375rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 4.98438rem */
+        cursor: default;
+      }
+
+      li:hover {
+        background: linear-gradient(
+          94deg,
+          #ff3636 -0.76%,
+          #eb00ff 72.19%,
+          #eb00ff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-position: -100%;
+        white-space: wrap;
+        animation: animated_gradient 3s ease infinite;
+      }
+    }
+    h3 {
+      margin: 6rem 3rem 0 3rem;
       font-family: Google Sans;
       font-size: 2rem;
       font-style: normal;
@@ -281,9 +315,56 @@ body::-webkit-scrollbar {
       cursor: default;
       color: #fff;
     }
+    button {
+      margin: 4rem 3rem 0 3rem;
+      padding: 1.25rem 2.5rem;
+      border-radius: 0.438rem;
+      background-color: #fff;
+      border: none;
+      color: #000;
+        font-family: Google Sans;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      
+      a{
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    button:hover{
+      background: linear-gradient(
+          94deg,
+          #ff3636 -0.76%,
+          #eb00ff 72.19%,
+          #eb00ff 100%
+        );
+        background-size: 200%;
+        background-position: -100%;
+        animation: animated_gradient 3s ease infinite;
+        color: #fff;
+
+    }
   }
 }
 
+.footer {
+  margin-left: 120px;
+  margin-top: 4rem;
+  height: 20rem;
+  background: rgba(25, 25, 25, 0.3);
+
+  .footer_logo{
+    width: 18.75rem;
+    height: 1.25rem;
+    
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 
 @keyframes animated_gradient {
   0% {

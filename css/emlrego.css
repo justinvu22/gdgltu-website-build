@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
 .main h2 {
   text-align: left;
   margin: 4rem 0 0 3rem;
-  text-shadow: 0px 0px 250px rgba(255, 255, 255, 0.25);
+  text-shadow: 0px 0px 150px rgba(255, 255, 255, 0.116);
   font-family: Google Sans;
   font-size: 5.36588rem;
   font-style: normal;
@@ -106,7 +106,7 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   background-size: 200%;
   background-position: -100%;
-  white-space: nowrap;
+  white-space: wrap;
   animation: animated_gradient 3s ease infinite;
 }
 .main .mid-section {
@@ -167,7 +167,7 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   background-size: 200%;
   background-position: -100%;
-  white-space: nowrap;
+  white-space: wrap;
   animation: animated_gradient 3s ease infinite;
 }
 .main .upcoming #third_text {
@@ -200,7 +200,7 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   background-size: 200%;
   background-position: -100%;
-  white-space: nowrap;
+  white-space: wrap;
   animation: animated_gradient 3s ease infinite;
 }
 .main .perks .explaination {
@@ -220,8 +220,36 @@ body::-webkit-scrollbar {
   line-height: normal;
   cursor: default;
 }
-.main .apply_section h3 {
+.main .apply_section .title_4 {
+  margin-top: 10rem;
+  font-size: 6.5rem;
+  font-weight: bold;
+}
+.main .apply_section ul {
   margin: 4rem 3rem 0 3rem;
+}
+.main .apply_section ul li {
+  list-style-type: none;
+  color: #fff;
+  font-family: Google Sans;
+  font-size: 3.4375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 4.98438rem */
+  cursor: default;
+}
+.main .apply_section ul li:hover {
+  background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-position: -100%;
+  white-space: wrap;
+  animation: animated_gradient 3s ease infinite;
+}
+.main .apply_section h3 {
+  margin: 6rem 3rem 0 3rem;
   font-family: Google Sans;
   font-size: 2rem;
   font-style: normal;
@@ -229,6 +257,45 @@ body::-webkit-scrollbar {
   line-height: normal;
   cursor: default;
   color: #fff;
+}
+.main .apply_section button {
+  margin: 4rem 3rem 0 3rem;
+  padding: 1.25rem 2.5rem;
+  border-radius: 0.438rem;
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-family: Google Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.main .apply_section button a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.main .apply_section button:hover {
+  background: linear-gradient(94deg, #ff3636 -0.76%, #eb00ff 72.19%, #eb00ff 100%);
+  background-size: 200%;
+  background-position: -100%;
+  animation: animated_gradient 3s ease infinite;
+  color: #fff;
+}
+
+.footer {
+  margin-left: 120px;
+  margin-top: 4rem;
+  height: 20rem;
+  background: rgba(25, 25, 25, 0.3);
+}
+.footer .footer_logo {
+  width: 18.75rem;
+  height: 1.25rem;
+}
+.footer .footer_logo img {
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes animated_gradient {
