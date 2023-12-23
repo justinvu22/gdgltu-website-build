@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&family=Maitree:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google Sans Display:wght@400");
 @import url("https://api.fontshare.com/css?f[]=google sans display@400&display=swap");
 
-$font: "Google Sans Display", sans-serif;
 
 html,
 * {
@@ -53,7 +53,8 @@ body::-webkit-scrollbar {
     text-align: left;
     margin: 4rem 0 0 3rem;
     text-shadow: 0px 0px 150px rgba(255, 255, 255, 0.116);
-    font-family: Google Sans;
+    font-family: Google Sans Display;
+
     font-size: 5.36588rem;
     font-style: normal;
     font-weight: 500;
@@ -68,7 +69,7 @@ body::-webkit-scrollbar {
   .role_name {
     text-align: left;
     margin: 7rem 0 0 3rem;
-    font-family: Google Sans;
+    font-family: Google Sans Display;
     font-size: 11.25rem;
     font-style: normal;
     font-weight: 700;
@@ -103,7 +104,8 @@ body::-webkit-scrollbar {
       li {
         list-style-type: none;
         color: #fff;
-        font-family: Google Sans;
+        font-family: Google Sans Display;
+
         font-size: 3.4375rem;
         font-style: normal;
         font-weight: 400;
@@ -133,7 +135,8 @@ body::-webkit-scrollbar {
     margin: 4rem 4rem 0 3rem;
     p {
       color: #fff;
-      font-family: Google Sans;
+      font-family: Google Sans Display;
+
       font-size: 2.2rem;
       font-style: normal;
       font-weight: 400;
@@ -146,7 +149,8 @@ body::-webkit-scrollbar {
     .role_name2 {
       text-align: left;
       margin: 10rem 0 0 0;
-      font-family: Google Sans;
+      font-family: Google Sans Display;
+
       font-size: 11.25rem;
       font-style: normal;
       font-weight: 700;
@@ -172,7 +176,8 @@ body::-webkit-scrollbar {
       li {
         list-style-type: none;
         color: #fff;
-        font-family: Google Sans;
+        font-family: Google Sans Display;
+
         font-size: 3.4375rem;
         font-style: normal;
         font-weight: 400;
@@ -221,7 +226,8 @@ body::-webkit-scrollbar {
       li {
         list-style-type: none;
         color: #fff;
-        font-family: Google Sans;
+        font-family: Google Sans Display;
+
         font-size: 3.4375rem;
         font-style: normal;
         font-weight: 400;
@@ -261,7 +267,8 @@ body::-webkit-scrollbar {
       background-position: -100%;
       white-space: wrap;
       animation: animated_gradient 7s ease infinite;
-      font-family: Google Sans;
+      font-family: Google Sans Display;
+
       font-size: 1.5rem;
       font-style: normal;
       font-weight: 700;
@@ -281,7 +288,8 @@ body::-webkit-scrollbar {
       li {
         list-style-type: none;
         color: #fff;
-        font-family: Google Sans;
+        font-family: Google Sans Display;
+
         font-size: 3.4375rem;
         font-style: normal;
         font-weight: 400;
@@ -307,7 +315,8 @@ body::-webkit-scrollbar {
     }
     h3 {
       margin: 6rem 3rem 0 3rem;
-      font-family: Google Sans;
+      font-family: Google Sans Display;
+
       font-size: 2rem;
       font-style: normal;
       font-weight: 400;
@@ -322,30 +331,30 @@ body::-webkit-scrollbar {
       background-color: #fff;
       border: none;
       color: #000;
-        font-family: Google Sans;
-        font-size: 1.25rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        cursor: pointer;
-      
-      a{
+      font-family: Google Sans Display;
+
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      cursor: pointer;
+
+      a {
         text-decoration: none;
         cursor: pointer;
       }
     }
-    button:hover{
+    button:hover {
       background: linear-gradient(
-          94deg,
-          #ff3636 -0.76%,
-          #eb00ff 72.19%,
-          #eb00ff 100%
-        );
-        background-size: 200%;
-        background-position: -100%;
-        animation: animated_gradient 3s ease infinite;
-        color: #fff;
-
+        94deg,
+        #ff3636 -0.76%,
+        #eb00ff 72.19%,
+        #eb00ff 100%
+      );
+      background-size: 200%;
+      background-position: -100%;
+      animation: animated_gradient 3s ease infinite;
+      color: #fff;
     }
   }
 }
@@ -359,18 +368,19 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 
-  .footer_logo{
+  .footer_logo {
     width: 31.25rem;
     height: 2.083rem;
-    
-    img{
+
+    img {
       width: 100%;
       height: 100%;
     }
 
-    p{
+    p {
       color: #535353;
-      font-family: Google Sans;
+      font-family: Google Sans Display;
+
       font-size: 1.25rem;
       font-style: normal;
       font-weight: 400;
