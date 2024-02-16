@@ -284,6 +284,10 @@ body::-webkit-scrollbar {
   animation: animated_gradient 3s ease infinite;
   color: #fff;
 }
+.main .apply_section .bottom_text_end {
+  inherits: h3;
+  font-size: 1.25rem;
+}
 
 .footer {
   margin-left: 120px;

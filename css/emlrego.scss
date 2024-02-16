@@ -356,6 +356,10 @@ body::-webkit-scrollbar {
       animation: animated_gradient 3s ease infinite;
       color: #fff;
     }
+    .bottom_text_end{
+      inherits: h3;
+      font-size: 1.25rem;
+    }
   }
 }
 
