@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&family=Maitree:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google Sans Display:wght@400;500;600;700;800;900");
+@import url("https://api.fontshare.com/css?f[]=google sans display@400;500;600;700;800;900&display=swap");
+
+
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f11;
+  overflow-x: clip;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 120px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  background: rgba(25, 25, 25, 0.3);
+  backdrop-filter: blur(4.5px);
+
+  .logo {
+    width: 90px;
+    height: 90px;
+    margin-top: 25px;
+  }
+}
+
+.main {
+  margin-left: 120px;
+  padding: 0px 10px;
+  white-space: wrap;
+  max-width: 100vw;
+
+  h2 {
+    text-align: left;
+    margin: 4rem 0 0 3rem;
+    text-shadow: 0px 0px 150px rgba(255, 255, 255, 0.116);
+    font-family: Google Sans Display;
+
+    font-size: 5.36588rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: linear-gradient(110deg, #fff 0.19%, rgba(0, 0, 0, 0.445) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+  }
+
+  .role_name {
+    text-align: left;
+    margin: 7rem 0 0 3rem;
+    font-family: Google Sans Display;
+    font-size: 11.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(
+      94deg,
+      #ff3636 -0.76%,
+      #eb00ff 72.19%,
+      #eb00ff 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    background-position: -100%;
+    white-space: nowrap;
+    animation: animated_gradient 7s ease infinite;
+    cursor: default;
+  }
+
+  .second_text {
+    margin-top: 13rem;
+    font-size: 6.5rem;
+    font-weight: bold;
+    cursor: default;
+  }
+
+  .qual {
+    margin: 4rem 0 0 3rem;
+
+    ul {
+      li {
+        list-style-type: none;
+        color: #fff;
+        font-family: Google Sans Display;
+
+        font-size: 3.4375rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 4.98438rem */
+        cursor: default;
+      }
+
+      li:hover {
+        background: linear-gradient(
+          94deg,
+          #ff3636 -0.76%,
+          #eb00ff 72.19%,
+          #eb00ff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-position: -100%;
+        white-space: wrap;
+        animation: animated_gradient 3s ease infinite;
+      }
+    }
+  }
+
+  .mid-section {
+    margin: 4rem 4rem 0 3rem;
+    p {
+      color: #fff;
+      font-family: Google Sans Display;
+
+      font-size: 2.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      cursor: default;
+    }
+  }
+  .upcoming {
+    margin: 4rem 3rem 0 3rem;
+    .role_name2 {
+      text-align: left;
+      margin: 10rem 0 0 0;
+      font-family: Google Sans Display;
+
+      font-size: 11.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      background: linear-gradient(
+        94deg,
+        #ff3636 -0.76%,
+        #eb00ff 72.19%,
+        #eb00ff 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      background-position: -100%;
+      white-space: wrap;
+      animation: animated_gradient 7s ease infinite;
+      cursor: default;
+    }
+
+    ul {
+      margin: 4rem 0 0 0;
+      li {
+        list-style-type: none;
+        color: #fff;
+        font-family: Google Sans Display;
+
+        font-size: 3.4375rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 4.98438rem */
+        cursor: default;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      li:hover {
+        background: linear-gradient(
+          94deg,
+          #ff3636 -0.76%,
+          #eb00ff 72.19%,
+          #eb00ff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-position: -100%;
+        white-space: wrap;
+        animation: animated_gradient 3s ease infinite;
+      }
+    }
+
+    #third_text {
+      margin: 10rem 0 0 0;
+      font-size: 6.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .perks {
+    .title_3 {
+      margin: 10rem 3rem 0 3rem;
+      font-size: 6.5rem;
+      font-weight: bold;
+    }
+    ul {
+      margin: 4rem 3rem 0 3rem;
+      li {
+        list-style-type: none;
+        color: #fff;
+        font-family: Google Sans Display;
+
+        font-size: 3.4375rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 4.98438rem */
+        cursor: default;
+      }
+
+      li:hover {
+        background: linear-gradient(
+          94deg,
+          #ff3636 -0.76%,
+          #eb00ff 72.19%,
+          #eb00ff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-position: -100%;
+        white-space: wrap;
+        animation: animated_gradient 3s ease infinite;
+      }
+    }
+
+    .explaination {
+      margin: 4rem 3rem 0 3rem;
+      background: linear-gradient(
+        94deg,
+        #ff3636 -0.76%,
+        #eb00ff 72.19%,
+        #eb00ff 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      background-position: -100%;
+      white-space: wrap;
+      animation: animated_gradient 7s ease infinite;
+      font-family: Google Sans Display;
+
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: default;
+    }
+  }
+
+  .apply_section {
+    .title_4 {
+      margin-top: 10rem;
+      font-size: 6.5rem;
+      font-weight: bold;
+    }
+    ul {
+      margin: 4rem 3rem 0 3rem;
+      li {
+        list-style-type: none;
+        color: #fff;
+        font-family: Google Sans Display;
+
+        font-size: 3.4375rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 4.98438rem */
+        cursor: default;
+      }
+
+      li:hover {
+        background: linear-gradient(
+          94deg,
+          #ff3636 -0.76%,
+          #eb00ff 72.19%,
+          #eb00ff 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-position: -100%;
+        white-space: wrap;
+        animation: animated_gradient 3s ease infinite;
+      }
+    }
+    h3 {
+      margin: 6rem 3rem 0 3rem;
+      font-family: Google Sans Display;
+
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      cursor: default;
+      color: #fff;
+    }
+    button {
+      margin: 4rem 3rem 0 3rem;
+      padding: 1.25rem 2.5rem;
+      border-radius: 0.438rem;
+      background-color: #fff;
+      border: none;
+      color: #000;
+      font-family: Google Sans Display;
+
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    button:hover {
+      background: linear-gradient(
+        94deg,
+        #ff3636 -0.76%,
+        #eb00ff 72.19%,
+        #eb00ff 100%
+      );
+      background-size: 200%;
+      background-position: -100%;
+      animation: animated_gradient 3s ease infinite;
+      color: #fff;
+    }
+    .bottom_text_end{
+      inherits: h3;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.footer {
+  margin-left: 120px;
+  margin-top: 4rem;
+  height: 20rem;
+  background: rgba(25, 25, 25, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer_logo {
+    width: 31.25rem;
+    height: 2.083rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      color: #535353;
+      font-family: Google Sans Display;
+
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      cursor: default;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes animated_gradient {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
