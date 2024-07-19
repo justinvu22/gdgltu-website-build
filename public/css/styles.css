@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 90%;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.countdown-label {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.button i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+.button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.button:hover:after {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.instagram {
+    background: #e4405f;
+    box-shadow: 0 0 10px rgba(228, 64, 95, 0.8);
+}
+
+.github {
+    background: #333;
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.8);
+}
+
+.join-us {
+    background: #00a859;
+    box-shadow: 0 0 10px rgba(0, 168, 89, 0.8);
+}
+
+.button:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .button i {
+        font-size: 1em;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #countdown {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .countdown-item {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .button i {
+        font-size: 0.9em;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
