@@ -6,6 +6,7 @@ import About from './pages/About';
 import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Admin from 'pages/Admin';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path='/admin' element={<Admin />} />
           </Routes>
         </main>
         <Footer />

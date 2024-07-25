@@ -23,19 +23,19 @@ const Footer: React.FC = () => {
             <ul className="list-none p-0 m-0 space-y-2">
               <li className="relative">
                 <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white">-</span>
-                <Link to="/" className="hover:text-blue-400 ml-6">Home</Link>
+                <Link to="/" className="hover:text-blue-400 transition-colors duration-300 ml-6">Home</Link>
               </li>
               <li className="relative">
                 <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white">-</span>
-                <Link to="/projects" className="hover:text-blue-400 ml-6">Projects</Link>
+                <Link to="/projects" className="hover:text-blue-400 transition-colors duration-300 ml-6">Projects</Link>
               </li>
               <li className="relative">
                 <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white">-</span>
-                <Link to="/about" className="hover:text-blue-400 ml-6">About</Link>
+                <Link to="/about" className="hover:text-blue-400 transition-colors duration-300 ml-6">About</Link>
               </li>
               <li className="relative">
                 <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white">-</span>
-                <Link to="/contact-us" className="hover:text-blue-400 ml-6">Contact Us</Link>
+                <Link to="/contact-us" className="hover:text-blue-400 transition-colors duration-300 ml-6">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -43,17 +43,18 @@ const Footer: React.FC = () => {
           {/* Social Icons Section */}
           <div className="flex flex-col items-center justify-center flex-1">
             <h3 className="text-lg font-semibold mb-2">Socials</h3>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/gdscltu/" className="hover:text-blue-400">
+            <div className="flex space-x-4 mb-2">
+              <a href="https://www.linkedin.com/company/gdscltu/" className="hover:text-blue-400 transition-colors duration-300">
                 <AiFillLinkedin size={24} />
               </a>
-              <a href="https://www.instagram.com/gdsclatrobe/" className="hover:text-blue-400">
+              <a href="https://www.instagram.com/gdsclatrobe/" className="hover:text-blue-400 transition-colors duration-300">
                 <AiFillInstagram size={24} />
               </a>
-              <a href="https://discord.gg/QFhjpndYZ5" className="hover:text-blue-400">
+              <a href="https://discord.gg/QFhjpndYZ5" className="hover:text-blue-400 transition-colors duration-300">
                 <AiFillDiscord size={24} />
               </a>
             </div>
+            <a href="/admin" className="text-center text-sm text-gray-400">Admin</a>
           </div>
         </div>
       </div>

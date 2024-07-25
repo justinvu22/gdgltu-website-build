@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "firebase/*": ["node_modules/firebase/*"]
+    },
     "target": "es5",
     "lib": [
       "dom",
