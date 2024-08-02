@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'GDSC La Trobe University',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Google Sans',
       ),
       home: const Homepage(),
     );

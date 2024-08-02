@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_app/views/components/hero_top_text.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -31,10 +33,14 @@ class _HomepageState extends State<Homepage> {
                 label: Text('Home'),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.event_available_outlined),
-                selectedIcon: Icon(Icons.event),
-                label: Text('Events'),
+                icon: Icon(Icons.description_outlined),
+                selectedIcon: Icon(Icons.description),
+                label: Text('Projects'),
               ),
+              NavigationRailDestination(icon: Icon(Icons.event_outlined),
+              selectedIcon: Icon(Icons.event), label: Text('Events'),),
+
+              NavigationRailDestination(icon: Icon(Icons.groups_outlined), selectedIcon: Icon(Icons.groups), label: Text('About Us'),),
               // Add more destinations as needed
             ],
             selectedIndex: 0, 
@@ -42,9 +48,9 @@ class _HomepageState extends State<Homepage> {
               // Handle navigation when items are clicked
             },
           ), // Add a divider
-          const Expanded( // Make the content take the remaining space
-            child: Center(
-              child: Text('Welcome to GDSC La Trobe!'),
+          Expanded( // Make the content take the remaining space
+            child: Row(
+              children: [TopHero()],
             ),
           ),
         ],
