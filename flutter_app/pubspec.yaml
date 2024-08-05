@@ -37,6 +37,10 @@ dependencies:
   flutter_animate: ^4.5.0
   simple_gradient_text: ^1.3.0
   flutter_gradient_animation_text: ^1.0.2
+  url_launcher: ^6.3.0
+  font_awesome_flutter: ^10.7.0
+  flutter_material_design_icons: ^1.1.7447
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +83,7 @@ fonts:
   - family: Roboto Mono
     fonts:
       - asset: lib/assets/fonts/RobotoMono-VariableFont_wght.ttf
+        weight: 400
   - family: Google Sans
     fonts:
       - asset: lib/assets/fonts/GoogleSans-Regular-v1.27.ttf

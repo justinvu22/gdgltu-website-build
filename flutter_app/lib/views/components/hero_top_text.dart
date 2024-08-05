@@ -3,6 +3,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/colorsTheme.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_app/views/components/join_us.dart';
 
 const appcolors = AppColors();
@@ -17,10 +20,51 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
   late Animation _animation;
   late Animation _curve;
 
+  var httpsUrL = Uri(
+      scheme: 'https',
+      host: 'gdsc.community.dev',
+      path: 'la-trobe-university-melbourne-australia/');
+
+  void _launchUrl() async => await canLaunchUrl(httpsUrL)
+      ? await launchUrl(httpsUrL)
+      : throw 'Could not launch';
+
+  var _instUrl = Uri(
+    scheme: 'https',
+    host: 'instagram.com',
+    path: 'gdsclatrobe',
+  );
+
+  void _launchUrlInsta() async => await canLaunchUrl(_instUrl)
+      ? await launchUrl(_instUrl)
+      : throw 'Could not launch';
+
+      
+  var _linkInUrl = Uri(
+    scheme: 'https',
+    host: 'linkedin.com',
+    path: 'company/gdscltu',
+  );
+
+  void _launchUrlLinkIn() async => await canLaunchUrl(_linkInUrl)
+      ? await launchUrl(_linkInUrl)
+      : throw 'Could not launch';
+
+        var _discordUrl = Uri(
+    scheme: 'https',
+    host: 'discord.gg',
+    path: '4HX7Ubk983',
+  
+  );
+
+  void _launchUrlDiscIn() async => await canLaunchUrl(_discordUrl)
+      ? await launchUrl(_discordUrl)
+      : throw 'Could not launch';
+
   @override
   void initState() {
     _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 650));
+        vsync: this, duration: const Duration(milliseconds: 550));
     _curve = CurvedAnimation(
         parent: _animationController, curve: Curves.easeInOutSine);
     _animation = Tween<double>(begin: 0.0, end: 250.0)
@@ -105,7 +149,10 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: const Color(0xFF1A1A1A), width: 3, strokeAlign: BorderSide.strokeAlignInside),
+              border: Border.all(
+                  color: const Color(0xFF1A1A1A),
+                  width: 3,
+                  strokeAlign: BorderSide.strokeAlignInside),
             ),
             clipBehavior: Clip.hardEdge,
             child: Stack(
@@ -161,7 +208,19 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
+          JoinUs(),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              IconButton(
+                  onPressed: _launchUrlInsta, iconSize: 24,icon: Icon(size: 24,MdiIcons.instagram)), SizedBox(width: 10),
+              IconButton(iconSize: 24, onPressed: _launchUrlLinkIn, icon: Icon(size: 24,MdiIcons.linkedin)),SizedBox(width: 10),IconButton(onPressed: _launchUrlDiscIn, icon: FaIcon(size: 24,FontAwesomeIcons.discord)),
+            
+            ],
+          )
         ],
       ),
     );

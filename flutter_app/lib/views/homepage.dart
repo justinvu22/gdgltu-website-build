@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/views/components/hero_top_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -11,6 +12,15 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   // No need for isNavRailOpen anymore
+
+  var _instUrl = Uri(
+    scheme: 'https',
+    host: 'instagram.com',
+    path: 'gdsclatrobe',
+  );
+
+    void _launchUrlInsta() async =>
+      await canLaunchUrl(_instUrl) ? await launchUrl(_instUrl) : throw 'Could not launch';
 
   @override
   Widget build(BuildContext context) {
