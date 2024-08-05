@@ -15,7 +15,6 @@ class _JoinUsState extends State<JoinUs> with SingleTickerProviderStateMixin {
   late AnimationController _animationController2;
   late Animation _animation2;
   late Animation _curve2;
-  late Animation _colorAnimation2;
 
   void initState() {
     _animationController2 = AnimationController(
@@ -25,9 +24,6 @@ class _JoinUsState extends State<JoinUs> with SingleTickerProviderStateMixin {
     _animation2 = Tween<double>(begin: 0.0, end: 150.0)
         .animate(_curve2 as Animation<double>)
       ..addListener(() {
-        setState(() {});
-      });
-      _colorAnimation2 = Tween<Color>(begin: Color(0xFF222222), end: Colors.white).animate(_curve2 as Animation<double>)..addListener(() {
         setState(() {});
       });
     super.initState();

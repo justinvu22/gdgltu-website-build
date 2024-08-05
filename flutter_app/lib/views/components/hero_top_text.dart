@@ -3,10 +3,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/colorsTheme.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_app/views/components/join_us.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
 
 const appcolors = AppColors();
 
@@ -209,15 +210,15 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
             ),
           ),
           const SizedBox(height: 20),
-          JoinUs(),
+          Container(constraints: const BoxConstraints(maxHeight: 50, maxWidth: 150),child: AnimatedButton(text: 'Join Us',textStyle: GoogleFonts.robotoMono(textStyle: const TextStyle(color: Color(0xFF222222), fontSize: 20,),),selectedTextColor: Color(0xFFFAFAFA),onPress: _launchUrl, animatedOn: AnimatedOn.onHover, transitionType: TransitionType.LEFT_TO_RIGHT, borderRadius: 50,backgroundColor: const Color(0xFFFAFAFA),selectedBackgroundColor: const Color(0xFF222222),borderColor: Color(0xFF222222),borderWidth: 2,)),
           const SizedBox(
             height: 10,
           ),
           Row(
             children: [
               IconButton(
-                  onPressed: _launchUrlInsta, iconSize: 24,icon: Icon(size: 24,MdiIcons.instagram)), SizedBox(width: 10),
-              IconButton(iconSize: 24, onPressed: _launchUrlLinkIn, icon: Icon(size: 24,MdiIcons.linkedin)),SizedBox(width: 10),IconButton(onPressed: _launchUrlDiscIn, icon: FaIcon(size: 24,FontAwesomeIcons.discord)),
+                  onPressed: _launchUrlInsta, iconSize: 24,icon: const Icon(size: 24,MdiIcons.instagram,color: Color(0xFF1A1A1A))), const SizedBox(width: 10),
+              IconButton(iconSize: 24, onPressed: _launchUrlLinkIn, icon: const Icon(size: 24,MdiIcons.linkedin,color: Color(0xFF1A1A1A))),const SizedBox(width: 10),IconButton(onPressed: _launchUrlDiscIn, icon: const FaIcon(size: 24,FontAwesomeIcons.discord, color: Color(0xFF1A1A1A),)),
             
             ],
           )
