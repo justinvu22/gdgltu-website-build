@@ -40,7 +40,6 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
       ? await launchUrl(_instUrl)
       : throw 'Could not launch';
 
-      
   var _linkInUrl = Uri(
     scheme: 'https',
     host: 'linkedin.com',
@@ -51,21 +50,29 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
       ? await launchUrl(_linkInUrl)
       : throw 'Could not launch';
 
-        var _discordUrl = Uri(
+  var _discordUrl = Uri(
     scheme: 'https',
     host: 'discord.gg',
     path: '4HX7Ubk983',
-  
   );
 
   void _launchUrlDiscIn() async => await canLaunchUrl(_discordUrl)
       ? await launchUrl(_discordUrl)
       : throw 'Could not launch';
 
+  var _emailLinkUrl = Uri(
+    scheme: 'mailto',
+    path: 'gdsclatrobe@gmail.com',
+  );
+
+  void _launchUrlEmail() async => await canLaunchUrl(_emailLinkUrl)
+      ? await launchUrl(_emailLinkUrl)
+      : throw 'Could not launch';
+
   @override
   void initState() {
     _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 550));
+        vsync: this, duration: const Duration(milliseconds: 350));
     _curve = CurvedAnimation(
         parent: _animationController, curve: Curves.easeInOutSine);
     _animation = Tween<double>(begin: 0.0, end: 250.0)
@@ -79,7 +86,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     double paddingPerc;
-    paddingPerc = MediaQuery.of(context).size.width / 20;
+    paddingPerc = MediaQuery.of(context).size.width / 12;
     return Container(
       padding: EdgeInsets.only(left: paddingPerc),
       width: MediaQuery.of(context).size.width / 2,
@@ -210,16 +217,55 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
             ),
           ),
           const SizedBox(height: 20),
-          Container(constraints: const BoxConstraints(maxHeight: 50, maxWidth: 150),child: AnimatedButton(text: 'Join Us',textStyle: GoogleFonts.robotoMono(textStyle: const TextStyle(color: Color(0xFF222222), fontSize: 20,),),selectedTextColor: Color(0xFFFAFAFA),onPress: _launchUrl, animatedOn: AnimatedOn.onHover, transitionType: TransitionType.LEFT_TO_RIGHT, borderRadius: 50,backgroundColor: const Color(0xFFFAFAFA),selectedBackgroundColor: const Color(0xFF222222),borderColor: Color(0xFF222222),borderWidth: 2,)),
+          Container(
+              constraints: const BoxConstraints(maxHeight: 50, maxWidth: 150),
+              child: AnimatedButton(
+                text: 'Join Us',
+                textStyle: GoogleFonts.robotoMono(
+                  textStyle: const TextStyle(
+                    color: Color(0xFF222222),
+                    fontSize: 20,
+                  ),
+                ),
+                selectedTextColor: Color(0xFFFAFAFA),
+                onPress: _launchUrl,
+                animatedOn: AnimatedOn.onHover,
+                transitionType: TransitionType.LEFT_TO_RIGHT,
+                borderRadius: 50,
+                backgroundColor: const Color(0xFFFAFAFA),
+                selectedBackgroundColor: const Color(0xFF222222),
+                borderColor: Color(0xFF222222),
+                borderWidth: 2,
+              )),
           const SizedBox(
             height: 10,
           ),
           Row(
             children: [
               IconButton(
-                  onPressed: _launchUrlInsta, iconSize: 24,icon: const Icon(size: 24,MdiIcons.instagram,color: Color(0xFF1A1A1A))), const SizedBox(width: 10),
-              IconButton(iconSize: 24, onPressed: _launchUrlLinkIn, icon: const Icon(size: 24,MdiIcons.linkedin,color: Color(0xFF1A1A1A))),const SizedBox(width: 10),IconButton(onPressed: _launchUrlDiscIn, icon: const FaIcon(size: 24,FontAwesomeIcons.discord, color: Color(0xFF1A1A1A),)),
-            
+                  onPressed: _launchUrlInsta,
+                  hoverColor: Color(0xFFE8DEF8),
+                  iconSize: 24,
+                  icon: const Icon(
+                      size: 24, MdiIcons.instagram, color: Color(0xFF1A1A1A))),
+              const SizedBox(width: 10),
+              IconButton(
+                  iconSize: 24,
+                  onPressed: _launchUrlLinkIn,
+                  hoverColor: Color(0xFFE8DEF8),
+                  icon: const Icon(
+                      size: 24, MdiIcons.linkedin, color: Color(0xFF1A1A1A))),
+              const SizedBox(width: 10),
+              IconButton(
+                  onPressed: _launchUrlDiscIn,
+                  hoverColor: Color(0xFFE8DEF8),
+                  icon: const FaIcon(
+                    size: 24,
+                    FontAwesomeIcons.discord,
+                    color: Color(0xFF1A1A1A),
+                  )),
+                  const SizedBox(width: 10,),
+              IconButton(onPressed: _launchUrlEmail, hoverColor: Color(0xFFE8DEF8), icon: Icon(Icons.mail_outline, color:Color(0xFF1A1A1A), size: 24,))
             ],
           )
         ],
