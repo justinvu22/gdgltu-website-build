@@ -1,7 +1,13 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/views/components/hero_top_image.dart';
 import 'package:flutter_app/views/components/hero_top_text.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_app/views/projectsPublic.dart';
+import 'package:flutter_app/views/eventsPublic.dart';
+import 'package:flutter_app/views/aboutUs.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -11,7 +17,17 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+
+  final List<Widget> _screens = [Container(
+             child: Row(
+                children: [TopHero(), TopHeroImg()],
+              ),
+           ),
+           Container(child: Projectspublic()),
+           Container(child: EventsPublic()),
+           Container(child: AboutUs())];
   // No need for isNavRailOpen anymore
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +37,7 @@ class _HomepageState extends State<Homepage> {
         // Use Row to place the rail and content side-by-side
         children: [
           NavigationRail(
-            backgroundColor: Color(0xF9FFFFFF),
+            backgroundColor: const Color(0xF9FFFFFF),
             // No leading icon in this version
             extended: false,
             leading: const Padding(
@@ -30,38 +46,47 @@ class _HomepageState extends State<Homepage> {
             labelType: NavigationRailLabelType.all,
             groupAlignment: 0,
             // Hide labels (icons only)
-            destinations: const [
+            destinations:  [
               NavigationRailDestination(
-                icon: Icon(Icons.home_outlined),
-                selectedIcon: Icon(Icons.home_filled),
-                label: Text('Home'),
+                padding: EdgeInsets.only(left: 10, right: 10),
+                icon: const Icon(Icons.home_outlined),
+                selectedIcon: const Icon(Icons.home_filled),
+                label: Text('Home', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.description_outlined),
-                selectedIcon: Icon(Icons.description),
-                label: Text('Projects'),
+                padding: EdgeInsets.only(left: 10, right: 10),
+                icon: const Icon(Icons.description_outlined),
+                selectedIcon: const Icon(Icons.description),
+                label: Text('Projects', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.event_outlined),
-                selectedIcon: Icon(Icons.event),
-                label: Text('Events'),
+                padding: EdgeInsets.only(left: 10, right: 10),
+                icon: const Icon(Icons.event_outlined),
+                selectedIcon: const Icon(Icons.event),
+                label: Text('Events', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
               ),
 
               NavigationRailDestination(
-                icon: Icon(Icons.groups_outlined),
-                selectedIcon: Icon(Icons.groups),
-                label: Text('About Us'),
+                padding: EdgeInsets.only(left: 10, right: 10),
+                icon: const Icon(Icons.groups_outlined),
+                selectedIcon: const Icon(Icons.groups),
+                label: Text('About Us', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
               ),
               // Add more destinations as needed
             ],
-            selectedIndex: 0,
+            selectedIndex: _selectedIndex,
             onDestinationSelected: (index) {
               // Handle navigation when items are clicked
+              setState(() {
+                _selectedIndex = index;
+              });
             },
           ), // Add a divider
-           Row(
-              children: [TopHero(), TopHeroImg()],
-            ),
+           Expanded(
+             child: Container(
+               child: _screens[_selectedIndex],
+                ),
+           ),
 
         ],
       ),

@@ -204,7 +204,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                       child: Text(
                         'Connect',
                         style: TextStyle(
-                          color: Color(0xFF1A1A1A),
+                          color: Color(0xFF222222),
                           fontSize: 50,
                           fontFamily: 'Google Sans',
                           fontWeight: FontWeight.w600,
@@ -238,7 +238,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                 borderWidth: 2,
               )),
           const SizedBox(
-            height: 10,
+            height: 20,
           ),
           Row(
             children: [
