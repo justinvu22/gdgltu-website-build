@@ -97,7 +97,9 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
           const Image(
               image: AssetImage('lib/assets/images/logo_full.png'), width: 300),
           const SizedBox(height: 10),
-          Row(
+          Wrap(
+            spacing: 10,
+            runSpacing: 10,
             children: [
               const Text(
                 'Where',
@@ -108,9 +110,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                 ),
                 textAlign: TextAlign.start,
               ),
-              const SizedBox(
-                width: 10,
-              ),
+              
               ShaderMask(
                 blendMode: BlendMode.srcIn,
                 shaderCallback: (bounds) {
@@ -125,18 +125,14 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 10,
-              ),
+              
               const Text('and',
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'Google Sans',
                   )),
-              const SizedBox(
-                width: 10,
-              ),
+             
               ShaderMask(
                 blendMode: BlendMode.srcIn,
                 shaderCallback: (bounds) {

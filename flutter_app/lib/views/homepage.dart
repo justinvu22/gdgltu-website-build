@@ -17,15 +17,16 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-
-  final List<Widget> _screens = [Container(
-             child: Row(
-                children: [TopHero(), TopHeroImg()],
-              ),
-           ),
-           Container(child: Projectspublic()),
-           Container(child: EventsPublic()),
-           Container(child: AboutUs())];
+  final List<Widget> _screens = [
+    Container(
+      child: Row(
+        children: [TopHero(), TopHeroImg()],
+      ),
+    ),
+    Container(child: Projectspublic()),
+    Container(child: EventsPublic()),
+    Container(child: AboutUs())
+  ];
   // No need for isNavRailOpen anymore
   int _selectedIndex = 0;
 
@@ -46,31 +47,43 @@ class _HomepageState extends State<Homepage> {
             labelType: NavigationRailLabelType.all,
             groupAlignment: 0,
             // Hide labels (icons only)
-            destinations:  [
+            destinations: [
               NavigationRailDestination(
                 padding: EdgeInsets.only(left: 10, right: 10),
                 icon: const Icon(Icons.home_outlined),
                 selectedIcon: const Icon(Icons.home_filled),
-                label: Text('Home', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
+                label: Text('Home',
+                    style: GoogleFonts.robotoMono(
+                        textStyle:
+                            const TextStyle(fontWeight: FontWeight.w400))),
               ),
               NavigationRailDestination(
                 padding: EdgeInsets.only(left: 10, right: 10),
                 icon: const Icon(Icons.description_outlined),
                 selectedIcon: const Icon(Icons.description),
-                label: Text('Projects', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
+                label: Text('Projects',
+                    style: GoogleFonts.robotoMono(
+                        textStyle:
+                            const TextStyle(fontWeight: FontWeight.w400))),
               ),
               NavigationRailDestination(
                 padding: EdgeInsets.only(left: 10, right: 10),
                 icon: const Icon(Icons.event_outlined),
                 selectedIcon: const Icon(Icons.event),
-                label: Text('Events', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
+                label: Text('Events',
+                    style: GoogleFonts.robotoMono(
+                        textStyle:
+                            const TextStyle(fontWeight: FontWeight.w400))),
               ),
 
               NavigationRailDestination(
                 padding: EdgeInsets.only(left: 10, right: 10),
                 icon: const Icon(Icons.groups_outlined),
                 selectedIcon: const Icon(Icons.groups),
-                label: Text('About Us', style: GoogleFonts.robotoMono(textStyle: const TextStyle(fontWeight: FontWeight.w600))),
+                label: Text('About Us',
+                    style: GoogleFonts.robotoMono(
+                        textStyle:
+                            const TextStyle(fontWeight: FontWeight.w400))),
               ),
               // Add more destinations as needed
             ],
@@ -82,12 +95,11 @@ class _HomepageState extends State<Homepage> {
               });
             },
           ), // Add a divider
-           Expanded(
-             child: Container(
-               child: _screens[_selectedIndex],
-                ),
-           ),
-
+          Expanded(
+            child: Container(
+              child: _screens[_selectedIndex],
+            ),
+          ),
         ],
       ),
     );
