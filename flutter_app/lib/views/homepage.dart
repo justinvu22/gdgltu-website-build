@@ -1,13 +1,8 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_app/views/components/hero_top_image.dart';
-import 'package:flutter_app/views/components/hero_top_text.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_app/views/projectsPublic.dart';
-import 'package:flutter_app/views/eventsPublic.dart';
-import 'package:flutter_app/views/aboutUs.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -17,91 +12,125 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  final List<Widget> _screens = [
-    Container(
-      child: Row(
-        children: [TopHero(), TopHeroImg()],
-      ),
-    ),
-    Container(child: Projectspublic()),
-    Container(child: EventsPublic()),
-    Container(child: AboutUs())
-  ];
-  // No need for isNavRailOpen anymore
-  int _selectedIndex = 0;
+  var _instUrl = Uri(
+    scheme: 'https',
+    host: 'instagram.com',
+    path: 'gdglatrobe',
+  );
+
+  void _launchUrlInsta() async => await canLaunchUrl(_instUrl)
+      ? await launchUrl(_instUrl)
+      : throw 'Could not launch';
+
+  var _linkInUrl = Uri(
+    scheme: 'https',
+    host: 'linkedin.com',
+    path: 'company/gdglatrobe',
+  );
+
+  void _launchUrlLinkIn() async => await canLaunchUrl(_linkInUrl)
+      ? await launchUrl(_linkInUrl)
+      : throw 'Could not launch';
+
+  var _discordUrl = Uri(
+    scheme: 'https',
+    host: 'discord.gg',
+    path: '4HX7Ubk983',
+  );
+
+  void _launchUrlDiscIn() async => await canLaunchUrl(_discordUrl)
+      ? await launchUrl(_discordUrl)
+      : throw 'Could not launch';
+
+  var _emailLinkUrl = Uri(
+    scheme: 'mailto',
+    path: 'gdsclatrobe@gmail.com',
+  );
+
+  void _launchUrlEmail() async => await canLaunchUrl(_emailLinkUrl)
+      ? await launchUrl(_emailLinkUrl)
+      : throw 'Could not launch';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Row(
-        // Use Row to place the rail and content side-by-side
+      body: Center(
+          child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          NavigationRail(
-            backgroundColor: const Color(0xF9FFFFFF),
-            // No leading icon in this version
-            extended: false,
-            leading: const Padding(
-                padding: EdgeInsets.only(top: 10),
-                child: Icon(Icons.more_horiz)),
-            labelType: NavigationRailLabelType.all,
-            groupAlignment: 0,
-            // Hide labels (icons only)
-            destinations: [
-              NavigationRailDestination(
-                padding: EdgeInsets.only(left: 10, right: 10),
-                icon: const Icon(Icons.home_outlined),
-                selectedIcon: const Icon(Icons.home),
-                label: Text('Home',
-                    style: GoogleFonts.robotoMono(
-                        textStyle:
-                            const TextStyle(fontWeight: FontWeight.w400))),
-              ),
-              NavigationRailDestination(
-                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
-                icon: const Icon(Icons.description_outlined),
-                selectedIcon: const Icon(Icons.description),
-                label: Text('Projects',
-                    style: GoogleFonts.robotoMono(
-                        textStyle:
-                            const TextStyle(fontWeight: FontWeight.w400))),
-              ),
-              NavigationRailDestination(
-                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
-                icon: const Icon(Icons.event_outlined),
-                selectedIcon: const Icon(Icons.event),
-                label: Text('Events',
-                    style: GoogleFonts.robotoMono(
-                        textStyle:
-                            const TextStyle(fontWeight: FontWeight.w400))),
-              ),
-
-              NavigationRailDestination(
-                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
-                icon: const Icon(Icons.groups_outlined),
-                selectedIcon: const Icon(Icons.groups),
-                label: Text('About Us',
-                    style: GoogleFonts.robotoMono(
-                        textStyle:
-                            const TextStyle(fontWeight: FontWeight.w400))),
-              ),
-              // Add more destinations as needed
-            ],
-            selectedIndex: _selectedIndex,
-            onDestinationSelected: (index) {
-              // Handle navigation when items are clicked
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-          ), // Add a divider
-          Expanded(
-            child: Container(
-              child: _screens[_selectedIndex],
-            ),
+          const Image(
+            image: AssetImage('lib/assets/images/robot-mascot-temp.png'),
+            width: 300,
+            height: 300,
           ),
+          const SizedBox(
+            height: 50,
+          ),
+          const Wrap(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'We are working on something cool!\nMeanwhile feel free to connect with us on our socials below!',
+                  style: TextStyle(
+                      fontFamily: 'Google Sans',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500),
+                  textAlign: TextAlign.center,
+                ),
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Wrap(children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                IconButton(
+                    onPressed: _launchUrlInsta,
+                    hoverColor: const Color(0xFFE8DEF8),
+                    iconSize: 24,
+                    icon: const Icon(
+                        size: 24,
+                        MdiIcons.instagram,
+                        color: Color(0xFF1A1A1A))),
+                const SizedBox(width: 10),
+                IconButton(
+                    iconSize: 24,
+                    onPressed: _launchUrlLinkIn,
+                    hoverColor: const Color(0xFFE8DEF8),
+                    icon: const Icon(
+                        size: 24, MdiIcons.linkedin, color: Color(0xFF1A1A1A))),
+                const SizedBox(width: 10),
+                IconButton(
+                    onPressed: _launchUrlDiscIn,
+                    hoverColor: const Color(0xFFE8DEF8),
+                    icon: const FaIcon(
+                      size: 24,
+                      FontAwesomeIcons.discord,
+                      color: Color(0xFF1A1A1A),
+                    )),
+                const SizedBox(
+                  width: 10,
+                ),
+                IconButton(
+                    onPressed: _launchUrlEmail,
+                    hoverColor: const Color(0xFFE8DEF8),
+                    icon: const Icon(
+                      Icons.mail_outline,
+                      color: Color(0xFF1A1A1A),
+                      size: 24,
+                    ))
+              ],
+            )
+          ])
         ],
-      ),
+      )),
     );
   }
 }

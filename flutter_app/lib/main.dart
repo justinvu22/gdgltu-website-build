@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'GDSC La Trobe University',
+      title: 'GDG La Trobe University',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Google Sans',
