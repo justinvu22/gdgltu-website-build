@@ -23,8 +23,8 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
 
   var httpsUrL = Uri(
       scheme: 'https',
-      host: 'gdsc.community.dev',
-      path: 'la-trobe-university-melbourne-australia/');
+      host: 'gdg.community.dev',
+      path: 'gdg-on-campus-la-trobe-university-melbourne-australia/');
 
   void _launchUrl() async => await canLaunchUrl(httpsUrL)
       ? await launchUrl(httpsUrL)
@@ -33,7 +33,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
   var _instUrl = Uri(
     scheme: 'https',
     host: 'instagram.com',
-    path: 'gdsclatrobe',
+    path: 'gdglatrobe',
   );
 
   void _launchUrlInsta() async => await canLaunchUrl(_instUrl)
@@ -43,7 +43,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
   var _linkInUrl = Uri(
     scheme: 'https',
     host: 'linkedin.com',
-    path: 'company/gdscltu',
+    path: 'company/gdglatrobe',
   );
 
   void _launchUrlLinkIn() async => await canLaunchUrl(_linkInUrl)
@@ -75,7 +75,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
         vsync: this, duration: const Duration(milliseconds: 350));
     _curve = CurvedAnimation(
         parent: _animationController, curve: Curves.easeInOutSine);
-    _animation = Tween<double>(begin: 0.0, end: 250.0)
+    _animation = Tween<double>(begin: 0.0, end: 225.0)
         .animate(_curve as Animation<double>)
       ..addListener(() {
         setState(() {});
@@ -98,13 +98,13 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
               image: AssetImage('lib/assets/images/logo_full.png'), width: 300),
           const SizedBox(height: 10),
           Wrap(
-            spacing: 10,
-            runSpacing: 10,
+            spacing: 7,
+            runSpacing: 7,
             children: [
               const Text(
                 'Where',
                 style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 45,
                   fontWeight: FontWeight.w600,
                   fontFamily: 'Google Sans',
                 ),
@@ -119,7 +119,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                 child: const Text(
                   'Tech',
                   style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 45,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'Google Sans',
                   ),
@@ -128,7 +128,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
               
               const Text('and',
                   style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 45,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'Google Sans',
                   )),
@@ -141,7 +141,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                 child: const Text(
                   'Community',
                   style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 45,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'Google Sans',
                   ),
@@ -166,7 +166,7 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                 Container(
                     clipBehavior: Clip.hardEdge,
                     width: _animation.value,
-                    height: 75,
+                    height: 70,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                       gradient: LinearGradient(
@@ -194,14 +194,14 @@ class TopHeroTxt extends State<TopHero> with SingleTickerProviderStateMixin {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                     ),
-                    width: 250,
-                    height: 75,
+                    width: 225,
+                    height: 70,
                     child: const Center(
                       child: Text(
                         'Connect',
                         style: TextStyle(
                           color: Color(0xFF222222),
-                          fontSize: 50,
+                          fontSize: 42,
                           fontFamily: 'Google Sans',
                           fontWeight: FontWeight.w600,
                         ),

@@ -51,14 +51,14 @@ class _HomepageState extends State<Homepage> {
               NavigationRailDestination(
                 padding: EdgeInsets.only(left: 10, right: 10),
                 icon: const Icon(Icons.home_outlined),
-                selectedIcon: const Icon(Icons.home_filled),
+                selectedIcon: const Icon(Icons.home),
                 label: Text('Home',
                     style: GoogleFonts.robotoMono(
                         textStyle:
                             const TextStyle(fontWeight: FontWeight.w400))),
               ),
               NavigationRailDestination(
-                padding: EdgeInsets.only(left: 10, right: 10),
+                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
                 icon: const Icon(Icons.description_outlined),
                 selectedIcon: const Icon(Icons.description),
                 label: Text('Projects',
@@ -67,7 +67,7 @@ class _HomepageState extends State<Homepage> {
                             const TextStyle(fontWeight: FontWeight.w400))),
               ),
               NavigationRailDestination(
-                padding: EdgeInsets.only(left: 10, right: 10),
+                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
                 icon: const Icon(Icons.event_outlined),
                 selectedIcon: const Icon(Icons.event),
                 label: Text('Events',
@@ -77,7 +77,7 @@ class _HomepageState extends State<Homepage> {
               ),
 
               NavigationRailDestination(
-                padding: EdgeInsets.only(left: 10, right: 10),
+                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
                 icon: const Icon(Icons.groups_outlined),
                 selectedIcon: const Icon(Icons.groups),
                 label: Text('About Us',

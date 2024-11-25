@@ -12,7 +12,7 @@ class EventsPublic extends StatelessWidget {
     double paddingPerc = MediaQuery.of(context).size.height / 10;
 
     return ListView(
-      physics: BouncingScrollPhysics(),
+      physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         children: [SizedBox(height: paddingPerc,),Row(
           children: [EventspublicLeft(), EventspublicRight()],
         ), SizedBox(height: paddingPerc,),Container(
