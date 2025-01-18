@@ -42,6 +42,12 @@ dependencies:
   flutter_material_design_icons: ^1.1.7447
   google_fonts: ^6.2.1
   flutter_animated_button: ^2.0.3
+  flutter_svg: ^2.0.9 #picture
+
+#new
+  google_maps_flutter: ^2.5.0
+  google_maps_flutter_web: ^0.5.4
+  geolocator: ^10.1.0
 
 dev_dependencies:
   flutter_test:
